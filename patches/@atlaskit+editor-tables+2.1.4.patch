@@ -1,0 +1,12 @@
+diff --git a/node_modules/@atlaskit/editor-tables/dist/types/utils/cells.d.ts b/node_modules/@atlaskit/editor-tables/dist/types/utils/cells.d.ts
+index 66cddec..0e635df 100644
+--- a/node_modules/@atlaskit/editor-tables/dist/types/utils/cells.d.ts
++++ b/node_modules/@atlaskit/editor-tables/dist/types/utils/cells.d.ts
+@@ -1,6 +1,6 @@
+ import { ResolvedPos } from 'prosemirror-model';
+ import { Axis } from '../types';
+-export declare function pointsAtCell($pos: ResolvedPos): false | import("prosemirror-model").Node<any> | null | undefined;
++export declare function pointsAtCell($pos: ResolvedPos): false | import("prosemirror-model").Node | null | undefined;
+ export declare function cellNear($pos: ResolvedPos): ResolvedPos | null;
+ export declare function cellAround($pos: ResolvedPos): ResolvedPos | null;
+ export declare function nextCell($pos: ResolvedPos, axis: Axis, dir: number): ResolvedPos | null;
