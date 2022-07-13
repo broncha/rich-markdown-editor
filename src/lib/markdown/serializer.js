@@ -44,6 +44,8 @@ export class MarkdownSerializer {
     this.nodes = nodes;
     // :: Object The mark serializer info.
     this.marks = marks;
+
+    this.options = {}
   }
 
   // :: (Node, ?Object) → string

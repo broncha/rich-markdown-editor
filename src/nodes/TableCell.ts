@@ -4,7 +4,7 @@ import {
   isTableSelected,
   isRowSelected,
   getCellsInColumn,
-} from "prosemirror-utils";
+} from "@atlaskit/editor-tables/utils";
 import Node from "./Node";
 
 export default class TableCell extends Node {

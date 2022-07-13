@@ -20,7 +20,7 @@ import {
   createTable,
   getCellsInColumn,
   moveRow,
-} from "prosemirror-utils";
+} from "@atlaskit/editor-tables/utils";
 import { Plugin, TextSelection } from "prosemirror-state";
 import tablesRule from "../rules/tables";
 
@@ -58,7 +58,7 @@ export default class Table extends Node {
     return {
       createTable: ({ rowsCount, colsCount }) => (state, dispatch) => {
         const offset = state.tr.selection.anchor + 1;
-        const nodes = createTable(schema, rowsCount, colsCount);
+        const nodes = createTable({schema, rowsCount, colsCount});
         const tr = state.tr.replaceSelectionWith(nodes).scrollIntoView();
         const resolvedPos = tr.doc.resolve(offset);
 
