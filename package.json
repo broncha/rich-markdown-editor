@@ -47,7 +47,7 @@
     "prosemirror-state": "^1.3.4",
     "prosemirror-tables": "^1.2.2",
     "prosemirror-transform": "^1.6.0",
-    "prosemirror-utils": "git+https://github.com/atlassian/prosemirror-utils.git",
+    "prosemirror-utils": "^1.2.1-0",
     "prosemirror-view": "^1.26.5",
     "react-medium-image-zoom": "^3.1.3",
     "react-portal": "^4.2.1",
