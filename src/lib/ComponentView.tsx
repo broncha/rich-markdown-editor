@@ -58,7 +58,10 @@ export default class ComponentView {
       getPos: this.getPos,
     });
 
-    this.root = createRoot(this.dom!)
+    if(!this.root) {
+      this.root = createRoot(this.dom!)
+    }
+    
     this.root.render(
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     );

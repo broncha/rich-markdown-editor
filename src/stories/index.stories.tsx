@@ -2,7 +2,7 @@ import Editor from "./index";
 import debounce from "lodash/debounce";
 import { Props } from "..";
 import React from "react";
-import { Story, Meta } from "@storybook/react/types-6-0";
+import { Meta, StoryFn } from "@storybook/react";
 
 export default {
   title: "Editor",
@@ -25,7 +25,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<Props> = args => <Editor {...args} />;
+const Template: StoryFn<Props> = args => <Editor {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

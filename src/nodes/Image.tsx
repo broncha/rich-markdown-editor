@@ -4,6 +4,7 @@ import { Plugin, TextSelection, NodeSelection } from "prosemirror-state";
 import { InputRule } from "prosemirror-inputrules";
 import styled from "styled-components";
 import ImageZoom from "react-medium-image-zoom";
+import 'react-medium-image-zoom/dist/styles.css'
 import getDataTransferFiles from "../lib/getDataTransferFiles";
 import uploadPlaceholderPlugin from "../lib/uploadPlaceholder";
 import insertFiles from "../commands/insertFiles";
@@ -266,18 +267,20 @@ export default class Image extends Node {
             />
           </Button>
           <ImageZoom
-            image={{
-              src,
-              alt,
-              title,
-            }}
-            defaultStyles={{
-              overlay: {
-                backgroundColor: theme.background,
-              },
-            }}
-            shouldRespectMaxDimension
-          />
+            // zoomImg={{
+            //   src,
+            //   alt,
+            //   title,
+            // }}
+            // defaultStyles={{
+            //   overlay: {
+            //     backgroundColor: theme.background,
+            //   },
+            // }}
+            // shouldRespectMaxDimension
+          >
+            <img src={src} alt={alt} title={title} />
+          </ImageZoom>
         </ImageWrapper>
         <Caption
           onKeyDown={this.handleKeyDown(props)}
@@ -492,10 +495,18 @@ const Caption = styled.p`
   }
 `;
 
-const ImageWrapper = styled.span`
+const ImageWrapper = styled.span<{theme: any}>`
   line-height: 0;
   display: inline-block;
   position: relative;
+
+  [data-rmiz-modal-overlay="hidden"] {
+    background-color: ${({theme}) => theme.background};
+  }
+
+  [data-rmiz-modal-overlay="visible"] {
+    background-color: ${({theme}) => theme.background};
+  }
 
   &:hover {
     ${Button} {
