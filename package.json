@@ -25,7 +25,7 @@
     ]
   },
   "dependencies": {
-    "@atlaskit/editor-tables": "^2.1.4",
+    "@atlaskit/editor-tables": "2.1.4",
     "@types/prosemirror-transform": "^1.4.2",
     "copy-to-clipboard": "^3.0.8",
     "fuzzy-search": "^3.2.1",
